@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vanshika Rangoli</title>
@@ -8,211 +10,216 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', sans-serif;
-    }body {
-  background-color: #fff7f9;
-  color: #333;
-  scroll-behavior: smooth;
-}
+    }
 
-a {
-  text-decoration: none;
-  color: white;
-}
+    body {
+      background-color: #fff7f9;
+      color: #000; /* Set content color to black */
+    }
 
-.navbar {
-  background: linear-gradient(to right, #ff5e78, #ff9966);
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+    a {
+      text-decoration: none;
+      color: white;
+    }
 
-.navbar h1 {
-  font-size: 24px;
-  animation: fadeInLeft 1s ease-in-out;
-}
+    .banner-container {
+      width: 100%;
+      max-height: 350px;
+      overflow: hidden;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 25px;
-  animation: fadeInRight 1s ease-in-out;
-}
+    .banner-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
 
-.nav-links a {
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: 0.3s;
-}
+    .navbar {
+      position: relative; /* Removed sticky */
+      z-index: 1000;
+      background-image: url('/rang/rangoli.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 20px 40px;
+      border: 2px solid white;
+      border-radius: 0 0 20px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
 
-.nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
+    .navbar h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
 
-.banner-container img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  display: block;
-}
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
 
-.intro-section {
-  max-width: 1100px;
-  margin: 50px auto;
-  background: linear-gradient(145deg, #fff4f8, #ffe6f0);
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  animation: fadeInUp 1.5s ease-in-out;
-}
+    .nav-links a {
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
 
-.intro-section h2 {
-  color: #b30059;
-  font-size: 36px;
-  margin-bottom: 24px;
-  text-align: center;
-}
+    .nav-links a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
 
-.intro-section p {
-  font-size: 18px;
-  line-height: 1.8;
-  text-align: justify;
-  margin-bottom: 20px;
-  color: #444;
-}
+    .section-heading {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 24px;
+      color: #e83e8c;
+    }
 
-.highlight {
-  background: #ffccdd;
-  padding: 3px 6px;
-  border-radius: 4px;
-  font-weight: bold;
-  color: #b30059;
-}
+    .content-body {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: justify;
+      color: #000;
+    }
 
-.explore-btn {
-  display: block;
-  width: max-content;
-  margin: 30px auto 0;
-  background-color: #ff5e78;
-  color: white;
-  padding: 14px 26px;
-  font-size: 18px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
+    footer {
+      background-color: #ffd9ec;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
 
-.explore-btn:hover {
-  background-color: #ff3970;
-}
+    .footer-nav {
+      margin-bottom: 8px;
+    }
 
-footer {
-  background: linear-gradient(to right, #2c2c2c, #ffe5ec);
-  color: #fff;
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 16px;
-  border-top: 3px solid #ffccd5;
-}
+    .footer-nav a {
+      color: #333;
+      margin: 0 10px;
+      border-right: 1px solid #999;
+      padding-right: 10px;
+    }
 
-footer strong {
-  color: #ffe5ec;
-}
+    .footer-nav a:last-child {
+      border: none;
+    }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @media (max-width: 600px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+      }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@media (max-width: 600px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
+      .nav-links a {
+        color: black;
+      }
+    }
   </style>
-</head><body>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner-container">
+    <img src="/rang/banner.jpg" alt="Vanshika Rangoli Banner" />
+  </div>
+
   <!-- Navbar -->
   <nav class="navbar">
     <h1>Vanshika Rangoli</h1>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="shadecard.html">Shade Card</a>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
     </div>
-  </nav>  <!-- Banner -->  <div class="banner-container">
-    <img src="banner.jpg" alt="Vanshika Rangoli Banner" />
-  </div>  <!-- Intro Section -->  <section class="intro-section">
-    <h2>Welcome to the World of Vibrant Expression</h2>
-    <p>
-      At <span class="highlight">Vanshika Rangoli</span>, we don’t just sell colors—we sell tradition, culture, and joy. We are a proud brand based in <span class="highlight">Ambala</span>, rooted in family heritage and spreading colors across India for over a decade. Whether you are a retailer, decorator, artisan, school, or simply someone who loves Rangoli, our products will speak to your soul.
-    </p>
-    <p>
-      Our range includes beautifully milled sand powders in neon, festive, and traditional shades. From <span class="highlight">Neon Pink</span> to <span class="highlight">Dark Green</span>, from <span class="highlight">Red</span> to <span class="highlight">White</span>, our catalog is ever-evolving with market trends. These aren’t just colors—they are emotions poured into festivals, weddings, competitions, and temple art.
-    </p>
-    <p>
-      The <span class="highlight">quality</span> of our sand is our pride: non-toxic, soft on hands, bright even in low light, and safe for kids. Every bottle or packet is a promise that your creativity won’t be compromised. Packaging is done in both bottles and polybags to suit different needs—from bulk buyers to art teachers.
-    </p>
-    <p>
-      Festivals like <span class="highlight">Diwali</span>, <span class="highlight">Holi</span>, <span class="highlight">Onam</span>, and <span class="highlight">Pongal</span> witness massive Rangoli displays—and our colors add sparkle to them. Each hue is designed to reflect joy: yellow for brightness, red for celebration, green for life, pink for charm. Our customers often share how our products make their artwork win hearts—and competitions!
-    </p>
-    <p>
-      Our <span class="highlight">Shade Card</span> has two categories:
-      <br><br>
-      <strong>Sand Shades:</strong> Neon Yellow, Neon Pink, Neon Orange, Neon Green, Neon Purple, Neon Blue, Red, White, Dark Green<br>
-      <strong>Burada Shades:</strong> Magenta, Dark Green, Dark Blue, Red, Yellow
-    </p>
-    <p>
-      We are expanding rapidly with the support of schools, shopkeepers, and craft communities. From large shipments to custom orders, we’re building a colorful network nationwide. Each year, we serve thousands of happy customers from Ambala to Chennai.
-    </p>
-    <p>
-      When you choose Vanshika Rangoli, you choose <span class="highlight">trust</span>, <span class="highlight">family values</span>, and <span class="highlight">colorful excellence</span>. We invite you to explore, create, and celebrate with us. Let’s fill the world with art, one Rangoli at a time.
-    </p>
-    <a class="explore-btn" href="shadecard.html">🎨 Explore Our Full Shade Card</a>
-  </section>  <!-- FOOTER -->  <footer>
-    <div style="max-width: 800px; margin: 0 auto;">
-      <h3 style="margin-bottom: 10px; font-size: 22px;">Contact Us</h3>
-      <p style="margin: 5px 0;">📍 <strong>Location:</strong> Ambala, Haryana, India</p>
-      <p style="margin: 5px 0;">📞 <strong>Phone:</strong> +91-XXXXXXXXXX</p>
-      <p style="margin: 5px 0;">✉️ <strong>Email:</strong> your-email@example.com</p>
-      <p style="margin-top: 20px; font-size: 14px; color: #ddd;">© 2025 Vanshika Rangoli. All rights reserved.</p>
+  </nav>
+
+  <!-- Section Headings -->
+  <h2 class="section-heading">🌸 Our Rangoli Products 🌸</h2>
+  <div class="content-body">
+    <h2 class="section-heading">🇮🇳 Vocal for Local</h2>
+    <h2 class="section-heading">✨ Proudly Indian, Authentically Ours</h2>
+    <h2 class="section-heading">🌈 Spreading Colors Across India for 20+ Years</h2>
+
+    <p><strong>Welcome to Vanshika Rangoli</strong> – your trusted partner in the world of Rangoli art and vibrant color traditions. For over <strong>20 years</strong>, Vanshika Rangoli has stood as a symbol of creativity, celebration, and culture. Based in <strong>Ambala, India</strong>, we are proud to be a <strong>Made in India</strong> brand serving countless customers across the country through our <strong>wholesale distribution</strong> of Rangoli products.</p>
+
+    <p>From humble beginnings to becoming one of India's most recognized Rangoli product brands, our journey has been painted with passion, colors, and trust. We offer a diverse collection of Rangoli essentials, including <strong>vibrant color packs</strong>, <strong>handy bottles</strong> for fine rangoli work, and beautifully crafted <strong>stencils</strong> that help both beginners and professionals bring designs to life effortlessly.</p>
+
+    <p>At Vanshika Rangoli, our commitment to quality and tradition is what sets us apart. All our products are made using carefully selected raw materials to ensure vibrant pigmentation, smooth texture, and ease of application. Each packet, bottle, and stencil reflects our dedication to creating the best Rangoli experience for homes, events, festivals, and cultural celebrations.</p>
+
+    <p>We believe Rangoli is not just an art form – it is a celebration of joy, tradition, and spiritual harmony. That’s why we strive to provide only the most authentic products. Our business is <strong>officially registered</strong> and recognized by the Government of India with <strong>Udyam Registration No: UDYAM-HR-03-002983</strong> and <strong>ESMI No: 2983/HR/2023</strong>, making us a trustworthy name in the wholesale industry.</p>
+
+    <p>With a network of resellers and retailers spread across India, Vanshika Rangoli is proud to say that our colors have reached every corner of the country – from local shops in small towns to major festive events in metro cities. Our products are perfect for Diwali, Holi, Onam, Navratri, weddings, poojas, and school competitions.</p>
+
+    <p>We take pride in being a <strong>customer-first brand</strong>. Whether you are an individual artist, a cultural organization, or a shop owner looking for bulk supplies, we cater to all requirements with flexible packaging and competitive pricing. Our <strong>packs and bottles</strong> are available in various sizes for convenient use and storage. We also offer customized stencils with trending patterns that help you create stunning Rangolis in minutes.</p>
+
+    <p>Our neon and classic sand colors are specially formulated to bring brilliance and depth to your Rangoli. From <strong>neon pink, yellow, blue, and orange</strong> to <strong>classic red, white, green, and purple</strong>, every shade is curated to complement your creativity. In addition to colored sand, we also supply <strong>Burada shades</strong> in darker tones for base fills and contrasts, such as magenta, dark blue, and yellow.</p>
+
+    <p>All of our offerings are safe, non-toxic, and environmentally friendly. We care not just about your designs, but also about your health and the environment. Our packaging is also made with recyclable materials wherever possible.</p>
+
+    <p><strong>Why choose Vanshika Rangoli?</strong></p>
+    <ul>
+      <li>✅ Over 20 Years of Expertise</li>
+      <li>✅ 100% Made in India Products</li>
+      <li>✅ Wide Range: Rangoli Packs, Bottles, and Stencils</li>
+      <li>✅ Government Registered Brand (Udyam & ESMI Verified)</li>
+      <li>✅ Trusted by Thousands of Retailers and Customers Nationwide</li>
+      <li>✅ Eco-Friendly & Skin-Safe Colors</li>
+      <li>✅ Handmade and non-toxic</li>
+    </ul>
+
+    <p><strong>Our best reseller is Sona Products, Ambala City.</strong></p>
+
+    <p>With a vision to inspire artistic expression and promote traditional Indian art forms, Vanshika Rangoli continues to innovate and serve customers with sincerity and pride. Our shades are not just colors; they are memories waiting to be created.</p>
+
+    <p>Whether you’re decorating your home, participating in a competition, or preparing your shop for the festive season – choose Vanshika Rangoli for the best in quality, variety, and authenticity.</p>
+
+    <p>Join us in celebrating India’s vibrant heritage with colors that speak louder than words. Thank you for being a part of our colorful journey.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-nav">
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
     </div>
+    <p>© 2025 Vanshika Rangoli. A wholesale brand serving India for over 20 years. Made in India | UDYAM-HR-03-002983 | ESMI No: 2983/HR/2023</p>
   </footer>
-</body></html>
+
+  <!-- Translate Button -->
+  <div style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+    <div id="google_translate_element"></div>
+  </div>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'hi,en',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
