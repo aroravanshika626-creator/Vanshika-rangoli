@@ -1,149 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Vanshika Rangoli</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
     body {
-      background-color: #fff7f9;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
       color: #333;
-    }
-
-    a {
-      text-decoration: none;
-      color: black;
     }
 
     /* Navbar */
     .navbar {
-      background-color: #ffd9ec;
+      width: 100%;
+      background: linear-gradient(90deg, #ffe6f0, #ffd9ec, #ffe6f0);
       padding: 15px 40px;
-      border-bottom: 2px solid #e83e8c;
+      border-bottom: 2px solid #ccc;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      color: black;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .navbar h1 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: bold;
+      color: black;
     }
 
     .nav-links {
       display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
+      gap: 25px;
     }
 
     .nav-links a {
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: 0.3s;
+      text-decoration: none;
+      font-size: 16px;
       color: black;
-      font-weight: 500;
+      transition: color 0.3s;
     }
 
     .nav-links a:hover {
-      background-color: rgba(0, 0, 0, 0.05);
+      color: #e60073;
     }
 
-    /* Contact Section */
-    .contact-container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #ffe0f0;
+    /* Contact section */
+    .contact-section {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 30px;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
-    .contact-container h2 {
-      text-align: center;
-      color: #d6336c;
+    .contact-section h2 {
+      font-size: 28px;
       margin-bottom: 20px;
+      color: #e60073;
     }
 
-    .contact-details {
-      margin-bottom: 30px;
-      font-size: 16px;
-      line-height: 1.8;
+    .contact-section p {
+      font-size: 18px;
+      margin: 10px 0;
+      line-height: 1.6;
     }
 
-    .contact-details strong {
-      color: #e83e8c;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 15px;
-      outline: none;
-    }
-
-    input:focus, textarea:focus {
-      border-color: #e83e8c;
-      box-shadow: 0 0 5px rgba(232,62,140,0.4);
-    }
-
-    button {
-      background-color: #e83e8c;
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background-color: #c2185b;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #ffd9ec;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-
-    .footer-nav {
-      margin-bottom: 8px;
-    }
-
-    .footer-nav a {
-      color: #333;
-      margin: 0 10px;
-      border-right: 1px solid #999;
-      padding-right: 10px;
-    }
-
-    .footer-nav a:last-child {
-      border: none;
+    .highlight {
+      font-weight: bold;
+      color: #e60073;
     }
   </style>
 </head>
 <body>
-
   <!-- Navbar -->
   <nav class="navbar">
     <h1>Vanshika Rangoli</h1>
@@ -151,39 +86,31 @@
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
       <a href="shadecard.html">Shade Card</a>
-      <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
 
   <!-- Contact Section -->
-  <div class="contact-container">
+  <section class="contact-section">
     <h2>Contact Us</h2>
-    <div class="contact-details">
-      <p><strong>Address:</strong> Vanshika Rangoli, Ambala City, Haryana, India</p>
-      <p><strong>Phone:</strong> +91 98765 43210</p>
-      <p><strong>Email:</strong> info@vanshikarangoli.com</p>
-      <p><strong>Udyam Registration No.:</strong> HR-12-345678</p>
-      <p><strong>ESMI No.:</strong> 2983/HR/2023</p>
-    </div>
+    <p>
+      Vanshika Rangoli is a proud <span class="highlight">Made in India</span> brand,  
+      serving customers for over <span class="highlight">20 years</span> with authentic Rangoli colors,  
+      sand bottles, packs, and stencils.  
+    </p>
+    <p>
+      As a registered wholesale brand (ESMI No. 2983/HR/2023, UDYAM Registration Available),  
+      we ensure quality and trust across India.
+    </p>
 
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
+    <p class="highlight">📍 Address:</p>
+    <p>Ambala City, Haryana, India</p>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-nav">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <p>© 2025 Vanshika Rangoli. Designed with 💖 | Made in India 🇮🇳</p>
-  </footer>
+    <p class="highlight">📞 Phone / WhatsApp:</p>
+    <p>+91-9876543210</p>
 
+    <p class="highlight">📧 Email:</p>
+    <p>support@vanshikarangoli.com</p>
+  </section>
 </body>
 </html>
