@@ -14,7 +14,7 @@
 
     body {
       background-color: #fff7f9;
-      color: #000; /* Set content color to black */
+      color: #000; /* Content color black */
     }
 
     a {
@@ -35,31 +35,29 @@
       object-fit: cover;
     }
 
+    /* NEW Navbar */
     .navbar {
-      position: relative; /* Removed sticky */
+      position: sticky;
+      top: 0;
       z-index: 1000;
-      background-image: url('/rang/rangoli.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      padding: 20px 40px;
-      border: 2px solid white;
-      border-radius: 0 0 20px 20px;
+      background: linear-gradient(90deg, #ff6ba0, #ff94d7);
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       color: white;
     }
 
     .navbar h1 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: bold;
+      margin: 0;
     }
 
     .nav-links {
       display: flex;
-      gap: 30px;
+      gap: 25px;
       flex-wrap: wrap;
     }
 
@@ -67,10 +65,11 @@
       padding: 6px 12px;
       border-radius: 6px;
       transition: 0.3s;
+      font-weight: 500;
     }
 
     .nav-links a:hover {
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
     .section-heading {
@@ -126,7 +125,7 @@
       }
 
       .nav-links a {
-        color: black;
+        color: white;
       }
     }
   </style>
@@ -135,17 +134,17 @@
 
   <!-- Banner -->
   <div class="banner-container">
-    <img src="/rang/banner.jpg" alt="Vanshika Rangoli Banner" />
+    <img src="banner.jpg" alt="Vanshika Rangoli Banner" />
   </div>
 
   <!-- Navbar -->
   <nav class="navbar">
     <h1>Vanshika Rangoli</h1>
     <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#">Gallery</a>
-      <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="shadecard.html">Shadecard</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
@@ -195,9 +194,9 @@
   <!-- Footer -->
   <footer>
     <div class="footer-nav">
-      <a href="#">Home</a>
-      <a href="#">Gallery</a>
-      <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
     </div>
     <p>© 2025 Vanshika Rangoli. A wholesale brand serving India for over 20 years. Made in India | UDYAM-HR-03-002983 | ESMI No: 2983/HR/2023</p>
   </footer>
