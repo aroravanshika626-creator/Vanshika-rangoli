@@ -226,7 +226,7 @@ footer {
 
 <p>At Vanshika Rangoli, our commitment to quality and tradition is what sets us apart. All our products are made using carefully selected raw materials to ensure vibrant pigmentation, smooth texture, and ease of application. Each packet, bottle, and stencil reflects our dedication to creating the best Rangoli experience for homes, events, festivals, and cultural celebrations.</p>
 
-<p>We believe Rangoli is not just an art form – it is a celebration of joy, tradition, and spiritual harmony. That’s why we strive to provide only the most authentic products. Our business is <strong>officially registered</strong> and recognized by the Government of India with <strong>Udyam Registration No: UDYAM-HR-03-002983</strong> and <strong>ESMI No: 2983/HR/2023</strong>, making us a trustworthy name in the wholesale industry.</p>
+<p>We believe Rangoli is not just an art form – it is a celebration of joy, tradition, and spiritual harmony. That’s why we strive to provide only the most authentic products. Our business is <strong>officially registered</strong> and recognized by the Government of India with <strong>Udyam Registration No: UDYAM-HR-03-002983</strong> making us a trustworthy name in the wholesale industry.</p>
 
 <p>With a network of resellers and retailers spread across India, Vanshika Rangoli is proud to say that our colors have reached every corner of the country – from local shops in small towns to major festive events in metro cities. Our products are perfect for Diwali, Holi, Onam, Navratri, weddings, poojas, and school competitions.</p>
 
@@ -292,9 +292,23 @@ function googleTranslateElementInit() {
     'google_translate_element'
   );
 }
+<div id="visitor-count" style="font-size: 20px; font-weight: bold;"></div>
+
+<script>
+  // Unique key for your site (replace "vanshikarangoli" with your site name)
+  const namespace = "vanshikarangoli";
+  const key = "homepage_visits";
+
+  // Fetch and increment the visitor count from CountAPI
+  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("visitor-count").innerText = "Visitors: " + data.value;
+    })
+    .catch(err => {
+      console.log("Error fetching visitor count:", err);
+      document.getElementById("visitor-count").innerText = "Visitors: 0";
+    });
 </script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- <a href='http://www.freevisitorcounters.com'>at freevisitorcounters.com</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=458f1083ea047dc70302c7782851568bcd599467'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1382075/t/0"></script>
 </body>
     </html>
