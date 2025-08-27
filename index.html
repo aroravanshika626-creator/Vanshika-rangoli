@@ -1,0 +1,323 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vanshika Rangoli</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body { 
+  background-color: #fff7f9;
+  color: #000;
+  position: relative;
+}
+
+/* Banner */
+.banner-container {
+  width: 100%;
+  max-height: 350px;
+  overflow: hidden;
+}
+
+.banner-container img {
+  width:100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #a9f1df, #ffbbbb);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color:black;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color:black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  color:black;
+}
+
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-weight: 500;
+  color:black;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Shadecard Button */
+.shadecard-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 20px;
+  float: right;
+}
+
+.shadecard-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.shadecard-btn:hover {
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  transform: scale(1.05);
+}
+
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 26px;
+  color: #e83e8c;
+}
+
+/* Cards Layout */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  color: #ff4d88;
+  margin-bottom: 10px;
+}
+
+.card p, .card ul {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: #ffd9ec;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.footer-nav {
+  margin-bottom: 8px;
+}
+
+.footer-nav a {
+  color: #333;
+  margin: 0 10px;
+  border-right: 1px solid #999;
+  padding-right: 10px;
+}
+
+.footer-nav a:last-child {
+  border: none;
+}
+
+/* Floating WhatsApp & Mail Buttons */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  z-index: 9999;
+}
+
+.floating-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+}
+
+.mail-btn {
+  right: 90px;
+}
+
+/* Translate Button */
+.translate-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 9999;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<!-- Banner -->
+<div class="banner-container">
+  <img src="banner.jpg" alt="Vanshika Rangoli Banner" />
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <h1>Vanshika Rangoli</h1>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shadecard.html">Shadecard</a>
+    <a href="products.html">Products</a>
+    <a href="contacts.html">Contact</a>
+  </div>
+</nav>
+
+<!-- Shadecard Explore Button -->
+<a href="shadecard.html" class="shadecard-btn">
+  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="palette icon">
+  Explore Shadecard
+</a>
+
+<!-- Section Heading -->
+<h2 class="section-heading">🌸 Our Rangoli Products 🌸</h2>
+
+<!-- Cards Content -->
+<div class="cards-container">
+
+  <div class="card">
+    <h3>About Us</h3>
+    <p><strong>Vanshika Rangoli</strong> has been a trusted name for over <strong>20 years</strong>, bringing vibrant Rangoli colors from <strong>Ambala, India</strong> to homes and businesses nationwide. We are proud to be a <strong>Made in India</strong> wholesale brand.</p>
+  </div>
+
+  <div class="card">
+    <h3>Our Journey</h3>
+    <p>From humble beginnings to becoming one of India’s leading Rangoli brands, our path has been filled with passion, colors, and trust. We now supply to countless retailers, shops, and cultural organizations across India.</p>
+  </div>
+
+  <div class="card">
+    <h3>Our Products</h3>
+    <p>We offer <strong>vibrant color packs</strong>, <strong>handy bottles</strong>, and <strong>beautiful stencils</strong>. Each product is designed to make Rangoli art easy and enjoyable for everyone.</p>
+  </div>
+
+  <div class="card">
+    <h3>Quality & Authenticity</h3>
+    <p>Our colors are made using carefully chosen raw materials to ensure brightness, smooth texture, and eco-friendliness. Officially registered with <strong>Udyam No: UDYAM-HR-03-002983</strong>.</p>
+  </div>
+
+  <div class="card">
+    <h3>Where We Supply</h3>
+    <p>Our Rangoli products reach every corner of India – from small-town shops to major festive events in metro cities. Perfect for <strong>Diwali, Holi, Onam, Navratri, weddings, poojas, and competitions</strong>.</p>
+  </div>
+
+  <div class="card">
+    <h3>Why Choose Us?</h3>
+    <ul>
+      <li>✅ 20+ Years of Expertise</li>
+      <li>✅ 100% Made in India</li>
+      <li>✅ Wide Range: Packs, Bottles, Stencils</li>
+      <li>✅ Government Registered Brand</li>
+      <li>✅ Eco-Friendly & Skin-Safe</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Our Shades</h3>
+    <p>We offer <strong>neon pink, yellow, blue, orange</strong> and classic <strong>red, white, green, purple</strong>. Burada shades like <strong>magenta, dark blue, yellow</strong> are also available.</p>
+  </div>
+
+  <div class="card">
+    <h3>Safe & Eco-Friendly</h3>
+    <p>All our offerings are <strong>non-toxic</strong> and <strong>environmentally friendly</strong>. We also use recyclable packaging to reduce waste.</p>
+  </div>
+
+  <div class="card">
+    <h3>Our Vision</h3>
+    <p>We aim to promote traditional Indian art by inspiring creativity through safe, authentic, and affordable Rangoli colors for everyone.</p>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contacts.html">Contact</a>
+  </div>
+  <p>© 2025 Vanshika Rangoli. A wholesale brand serving India for over 20 years. Made in India | UDYAM-HR-01-0058084</p>
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/918395994899" target="_blank" class="floating-btn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!-- Mail Button -->
+<a href="mailto:vanshikarangolimart@gmail.com" class="floating-btn mail-btn">
+  <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Mail">
+</a>
+
+<!-- Translate Button -->
+<div class="translate-btn">
+  <div id="google_translate_element"></div>
+</div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'en', includedLanguages: 'hi,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+    'google_translate_element'
+  );
+}
+</script>
+
+</body>
+</html>
