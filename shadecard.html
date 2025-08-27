@@ -1,11 +1,10 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shade Card - Vanshika Rangoli</title>
   <style>
-   <style>
     * {
       margin: 0;
       padding: 0;
@@ -15,14 +14,15 @@
 
     body {
       background-color: #fff7f9;
-      color: #000; /* Content color black */
+      color: #000;
     }
 
     a {
       text-decoration: none;
-      color: white;
+      color: inherit;
     }
 
+    /* Banner */
     .banner-container {
       width: 100%;
       max-height: 350px;
@@ -30,13 +30,13 @@
     }
 
     .banner-container img {
-      width:auto;
+      width: 100%;
       height: auto;
       display: block;
       object-fit: cover;
     }
 
-    /* NEW Navbar */
+    /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
@@ -53,14 +53,13 @@
       font-size: 24px;
       font-weight: bold;
       margin: 0;
-      color:black;
+      color: black;
     }
 
     .nav-links {
       display: flex;
       gap: 25px;
       flex-wrap: wrap;
-      color:black;
     }
 
     .nav-links a {
@@ -68,34 +67,29 @@
       border-radius: 6px;
       transition: 0.3s;
       font-weight: 500;
-      color:black;
+      color: black;
     }
 
     .nav-links a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.3);
     }
 
+    /* Section heading */
     .section-heading {
       text-align: center;
       margin: 40px 0 20px;
-      font-size: 24px;
+      font-size: 26px;
       color: #e83e8c;
     }
 
-    .content-body {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px 40px;
-      font-size: 16px;
-      line-height: 1.8;
-      text-align: justify;
-      color: #000;
-    }
+    /* Shade card grid */
     .shade-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 20px;
+      padding: 0 20px 40px;
     }
+
     .shade {
       background: white;
       border-radius: 15px;
@@ -104,9 +98,11 @@
       text-align: center;
       transition: transform 0.2s ease-in-out;
     }
+
     .shade:hover {
       transform: translateY(-5px);
     }
+
     .color-box {
       width: 80px;
       height: 80px;
@@ -114,91 +110,145 @@
       margin: 0 auto 10px;
       border: 2px solid #ddd;
     }
+
     .shade p {
       margin: 0;
       font-size: 16px;
       font-weight: bold;
     }
+
+    /* Footer */
+    footer {
+      background-color: #ffd9ec;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    .footer-nav {
+      margin-bottom: 8px;
+    }
+
+    .footer-nav a {
+      color: #333;
+      margin: 0 10px;
+      border-right: 1px solid #999;
+      padding-right: 10px;
+    }
+
+    .footer-nav a:last-child {
+      border: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links a {
+        color: black;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="banner-container">
-      <img src="banner.jpg" alt="Vanshika Rangoli Banner"/>
-    </div>
+
+  <!-- Banner -->
+  <div class="banner-container">
+    <img src="banner.jpg" alt="Vanshika Rangoli Banner" />
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
     <h1>Vanshika Rangoli</h1>
-    <nav>
+    <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="shadecard.html">Shade Card</a>
-      <a href="about.html">About</a>
+      <a href="shadecard.html">Shadecard</a>
+      <a href="products.html">Products</a>
       <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    <h2>Sand Colors</h2>
-    <div class="shade-grid">
-      <div class="shade"><div class="color-box" style="background: yellow;"></div><p>Yellow</p></div>
-      <div class="shade"><div class="color-box" style="background: red;"></div><p>Red</p></div>
-      <div class="shade"><div class="color-box" style="background: violet;"></div><p>Violet</p></div>
-      <div class="shade"><div class="color-box" style="background: green;"></div><p>Green</p></div>
-      <div class="shade"><div class="color-box" style="background: darkblue;"></div><p>Dark Blue</p></div>
-      <div class="shade"><div class="color-box" style="background: orange;"></div><p>Orange</p></div>
-      <div class="shade"><div class="color-box" style="background: skyblue;"></div><p>Sky Blue</p></div>
-      <div class="shade"><div class="color-box" style="background: deeppink;"></div><p>Rani Colour</p></div>
-      <div class="shade"><div class="color-box" style="background: mediumseagreen;"></div><p>Peacock Green</p></div>
-      <div class="shade"><div class="color-box" style="background: purple;"></div><p>Purple</p></div>
-      <div class="shade"><div class="color-box" style="background: saddlebrown;"></div><p>Chocolate</p></div>
-      <div class="shade"><div class="color-box" style="background: teal;"></div><p>Peacock Blue</p></div>
-      <div class="shade"><div class="color-box" style="background: black;"></div><p>Black</p></div>
-      <div class="shade"><div class="color-box" style="background: darkorange;"></div><p>Dark Orange</p></div>
-      <div class="shade"><div class="color-box" style="background: maroon;"></div><p>Maroon</p></div>
-      <div class="shade"><div class="color-box" style="background: gold;"></div><p>Mango</p></div>
-      <div class="shade"><div class="color-box" style="background: #556b2f;"></div><p>Mehendi</p></div>
-      <div class="shade"><div class="color-box" style="background: darkgreen;"></div><p>Dark Peacock Green</p></div>
-      <div class="shade"><div class="color-box" style="background: mediumvioletred;"></div><p>Falsa Colour</p></div>
-      <div class="shade"><div class="color-box" style="background: royalblue;"></div><p>Royal Blue</p></div>
-      <div class="shade"><div class="color-box" style="background: magenta;"></div><p>Magenta</p></div>
-      <div class="shade"><div class="color-box" style="background: goldenrod;"></div><p>Golden Yellow</p></div>
-      <div class="shade"><div class="color-box" style="background: lightgreen;"></div><p>Pista Colour</p></div>
-      <div class="shade"><div class="color-box" style="background: darkgreen;"></div><p>Dark Green</p></div>
-      <div class="shade"><div class="color-box" style="background: peachpuff;"></div><p>Skin Colour</p></div>
-      <div class="shade"><div class="color-box" style="background: mediumaquamarine;"></div><p>Rama Colour</p></div>
-      <div class="shade"><div class="color-box" style="background: white; border:1px solid #ccc;"></div><p>White</p></div>
     </div>
+  </nav>
+
+  <!-- Shade Cards -->
+  <h2 class="section-heading">Sand Colors</h2>
+  <div class="shade-grid">
+    <div class="shade"><div class="color-box" style="background: yellow;"></div><p>Yellow</p></div>
+    <div class="shade"><div class="color-box" style="background: red;"></div><p>Red</p></div>
+    <div class="shade"><div class="color-box" style="background: violet;"></div><p>Violet</p></div>
+    <div class="shade"><div class="color-box" style="background: green;"></div><p>Green</p></div>
+    <div class="shade"><div class="color-box" style="background: darkblue;"></div><p>Dark Blue</p></div>
+    <div class="shade"><div class="color-box" style="background: orange;"></div><p>Orange</p></div>
+    <div class="shade"><div class="color-box" style="background: skyblue;"></div><p>Sky Blue</p></div>
+    <div class="shade"><div class="color-box" style="background: deeppink;"></div><p>Rani Colour</p></div>
+    <div class="shade"><div class="color-box" style="background: mediumseagreen;"></div><p>Peacock Green</p></div>
+    <div class="shade"><div class="color-box" style="background: purple;"></div><p>Purple</p></div>
+    <div class="shade"><div class="color-box" style="background: saddlebrown;"></div><p>Chocolate</p></div>
+    <div class="shade"><div class="color-box" style="background: teal;"></div><p>Peacock Blue</p></div>
+    <div class="shade"><div class="color-box" style="background: black;"></div><p>Black</p></div>
+    <div class="shade"><div class="color-box" style="background: darkorange;"></div><p>Dark Orange</p></div>
+    <div class="shade"><div class="color-box" style="background: maroon;"></div><p>Maroon</p></div>
+    <div class="shade"><div class="color-box" style="background: gold;"></div><p>Mango</p></div>
+    <div class="shade"><div class="color-box" style="background: #556b2f;"></div><p>Mehendi</p></div>
+    <div class="shade"><div class="color-box" style="background: darkgreen;"></div><p>Dark Peacock Green</p></div>
+    <div class="shade"><div class="color-box" style="background: mediumvioletred;"></div><p>Falsa Colour</p></div>
+    <div class="shade"><div class="color-box" style="background: royalblue;"></div><p>Royal Blue</p></div>
+    <div class="shade"><div class="color-box" style="background: magenta;"></div><p>Magenta</p></div>
+    <div class="shade"><div class="color-box" style="background: goldenrod;"></div><p>Golden Yellow</p></div>
+    <div class="shade"><div class="color-box" style="background: lightgreen;"></div><p>Pista Colour</p></div>
+    <div class="shade"><div class="color-box" style="background: darkgreen;"></div><p>Dark Green</p></div>
+    <div class="shade"><div class="color-box" style="background: peachpuff;"></div><p>Skin Colour</p></div>
+    <div class="shade"><div class="color-box" style="background: mediumaquamarine;"></div><p>Rama Colour</p></div>
+    <div class="shade"><div class="color-box" style="background: white; border:1px solid #ccc;"></div><p>White</p></div>
   </div>
 
-  <div class="container">
-    <h2>Burada Colors</h2>
-    <div class="shade-grid">
-      <!-- Re-using same colors for Burada -->
-      <div class="shade"><div class="color-box" style="background: yellow;"></div><p>Yellow</p></div>
-      <div class="shade"><div class="color-box" style="background: red;"></div><p>Red</p></div>
-      <div class="shade"><div class="color-box" style="background: violet;"></div><p>Violet</p></div>
-      <div class="shade"><div class="color-box" style="background: green;"></div><p>Green</p></div>
-      <div class="shade"><div class="color-box" style="background: darkblue;"></div><p>Dark Blue</p></div>
-      <div class="shade"><div class="color-box" style="background: orange;"></div><p>Orange</p></div>
-      <div class="shade"><div class="color-box" style="background: skyblue;"></div><p>Sky Blue</p></div>
-      <div class="shade"><div class="color-box" style="background: deeppink;"></div><p>Rani Colour</p></div>
-      <div class="shade"><div class="color-box" style="background: mediumseagreen;"></div><p>Peacock Green</p></div>
-      <div class="shade"><div class="color-box" style="background: purple;"></div><p>Purple</p></div>
-      <div class="shade"><div class="color-box" style="background: saddlebrown;"></div><p>Chocolate</p></div>
-      <div class="shade"><div class="color-box" style="background: teal;"></div><p>Peacock Blue</p></div>
-      <div class="shade"><div class="color-box" style="background: black;"></div><p>Black</p></div>
-      <div class="shade"><div class="color-box" style="background: darkorange;"></div><p>Dark Orange</p></div>
-      <div class="shade"><div class="color-box" style="background: maroon;"></div><p>Maroon</p></div>
-      <div class="shade"><div class="color-box" style="background: gold;"></div><p>Mango</p></div>
-      <div class="shade"><div class="color-box" style="background: #556b2f;"></div><p>Mehendi</p></div>
-      <div class="shade"><div class="color-box" style="background: darkgreen;"></div><p>Dark Peacock Green</p></div>
-      <div class="shade"><div class="color-box" style="background: mediumvioletred;"></div><p>Falsa Colour</p></div>
-      <div class="shade"><div class="color-box" style="background: royalblue;"></div><p>Royal Blue</p></div>
-      <div class="shade"><div class="color-box" style="background: magenta;"></div><p>Magenta</p></div>
-      <div class="shade"><div class="color-box" style="background: goldenrod;"></div><p>Golden Yellow</p></div>
-      <div class="shade"><div class="color-box" style="background: lightgreen;"></div><p>Pista Colour</p></div>
-      <div class="shade"><div class="color-box" style="background: darkgreen;"></div><p>Dark Green</p></div>
-      <div class="shade"><div class="color-box" style="background: peachpuff;"></div><p>Skin Colour</p></div>
-      <div class="shade"><div class="color-box" style="background: mediumaquamarine;"></div><p>Rama Colour</p></div>
-    </div>
+  <h2 class="section-heading">Burada Colors</h2>
+  <div class="shade-grid">
+    <div class="shade"><div class="color-box" style="background: yellow;"></div><p>Yellow</p></div>
+    <div class="shade"><div class="color-box" style="background: red;"></div><p>Red</p></div>
+    <div class="shade"><div class="color-box" style="background: violet;"></div><p>Violet</p></div>
+    <div class="shade"><div class="color-box" style="background: green;"></div><p>Green</p></div>
+    <div class="shade"><div class="color-box" style="background: darkblue;"></div><p>Dark Blue</p></div>
+    <div class="shade"><div class="color-box" style="background: orange;"></div><p>Orange</p></div>
+    <div class="shade"><div class="color-box" style="background: skyblue;"></div><p>Sky Blue</p></div>
+    <div class="shade"><div class="color-box" style="background: deeppink;"></div><p>Rani Colour</p></div>
+    <div class="shade"><div class="color-box" style="background: mediumseagreen;"></div><p>Peacock Green</p></div>
+    <div class="shade"><div class="color-box" style="background: purple;"></div><p>Purple</p></div>
+    <div class="shade"><div class="color-box" style="background: saddlebrown;"></div><p>Chocolate</p></div>
+    <div class="shade"><div class="color-box" style="background: teal;"></div><p>Peacock Blue</p></div>
+    <div class="shade"><div class="color-box" style="background: black;"></div><p>Black</p></div>
+    <div class="shade"><div class="color-box" style="background: darkorange;"></div><p>Dark Orange</p></div>
+    <div class="shade"><div class="color-box" style="background: maroon;"></div><p>Maroon</p></div>
+    <div class="shade"><div class="color-box" style="background: gold;"></div><p>Mango</p></div>
+    <div class="shade"><div class="color-box" style="background: #556b2f;"></div><p>Mehendi</p></div>
+    <div class="shade"><div class="color-box" style="background: darkgreen;"></div><p>Dark Peacock Green</p></div>
+    <div class="shade"><div class="color-box" style="background: mediumvioletred;"></div><p>Falsa Colour</p></div>
+    <div class="shade"><div class="color-box" style="background: royalblue;"></div><p>Royal Blue</p></div>
+    <div class="shade"><div class="color-box" style="background: magenta;"></div><p>Magenta</p></div>
+    <div class="shade"><div class="color-box" style="background: goldenrod;"></div><p>Golden Yellow</p></div>
+    <div class="shade"><div class="color-box" style="background: lightgreen;"></div><p>Pista Colour</p></div>
+    <div class="shade"><div class="color-box" style="background: darkgreen;"></div><p>Dark Green</p></div>
+    <div class="shade"><div class="color-box" style="background: peachpuff;"></div><p>Skin Colour</p></div>
+    <div class="shade"><div class="color-box" style="background: mediumaquamarine;"></div><p>Rama Colour</p></div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2025 Vanshika Rangoli. A wholesale brand serving India for over 20 years. Made in India | UDYAM-HR-03-002983 | ESMI No: 2983/HR/2023</p>
+  </footer>
+
 </body>
 </html>
