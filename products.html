@@ -1,234 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rangoli Gallery - Vanshika Rangoli</title>
-  <style>
-    /* Reset + font */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rangoli Gallery - Vanshika Rangoli</title>
 
-    body {
-      background-color: #fffdfd;
-      color: #333;
-      position: relative;
-    }
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-dM8k+7c6H9i+I0P1w+K0YlT9g1mJ9PrJ3rNwz8R3AqV5zq0p3w+Cc+fX0C1+Z6kZyqX+wVq7b9yT7Fq3w4Fkqw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    /* Banner */
-    .banner {
-      width: 100%;
-      height: 300px;
-      background: url("banner.jpg") center/cover no-repeat;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    /* Navbar */
-    .navbar {
-      width: 100%;
-        background: linear-gradient(90deg, #a9f1df, #ffbbbb);
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+body {
+  background-color: #fffdfd;
+  color: #000;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: black;
-    }
+a {
+  text-decoration: none;
+  color: white;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
+/* Banner */
+.banner-container {
+  width: 100%;
+  max-height: 350px;
+  overflow: hidden;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      font-size: 16px;
-      color: black;
-      transition: color 0.3s;
-    }
+.banner-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 
-    .nav-links a:hover {
-      color: #cc0066;
-    }
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #a9f1df, #ffbbbb);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: black;
+}
 
-    /* Shadecard Button */
-    .shadecard-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(90deg, #ff7eb3, #ff758c);
-      color: white;
-      padding: 12px 18px;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 16px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: 0.3s;
-      margin: 20px 40px;
-      float: right;
-    }
+.navbar h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: black;
+}
 
-    .shadecard-btn img {
-      width: 20px;
-      height: 20px;
-    }
+.nav-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
 
-    .shadecard-btn:hover {
-      background: linear-gradient(90deg, #ff758c, #ff7eb3);
-      transform: scale(1.05);
-    }
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-weight: 500;
+  color: black;
+}
 
-    /* Floating WhatsApp & Mail Buttons */
-    .floating-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-      z-index: 9999;
-      margin-top: 10px;
-    }
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
-    .floating-btn img {
-      width: 100%;
-      height: 100%;
-    }
+/* Shadecard Button */
+.shadecard-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  margin: 15px 20px;
+  float: right;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
 
-    .floating-btn:hover {
-      transform: scale(1.1);
-    }
+.shadecard-btn:hover {
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  transform: scale(1.05);
+}
 
-    .mail-btn {
-      right: 90px;
-    }
+/* Gallery Section */
+.gallery-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
 
-    /* Gallery Section */
-    .gallery-section {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
+.gallery-section h2 {
+  font-size: 28px;
+  color: #d6336c;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ff758c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
-    .gallery-section h2 {
-      font-size: 28px;
-      color: #d6336c;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ff758c;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
 
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
 
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-  </style>
+/* Footer */
+footer {
+  background-color: #ffd9ec;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.footer-nav {
+  margin-bottom: 8px;
+}
+
+.footer-nav a {
+  color: #333;
+  margin: 0 10px;
+  border-right: 1px solid #999;
+  padding-right: 10px;
+}
+
+.footer-nav a:last-child {
+  border: none;
+}
+
+/* Floating Buttons */
+.float-btns {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.float-btns a {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.float-btns a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.float-btns a.whatsapp {
+  background: #25D366;
+}
+
+.float-btns a.mail-btn {
+  background: #ff5c5c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shadecard-btn {
+    float: none;
+    display: block;
+    margin: 15px auto;
+  }
+}
+</style>
 </head>
 <body>
 
-  <!-- Banner -->
-  <div class="banner"></div>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">Vanshika Rangoli</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="shadecard.html">Shade Card</a>
-        <a href="products.html">Products</a>
-      <a href="contacts.html">Contact</a>
-    </div>
-  </nav>
-
-  <!-- Shadecard Button -->
-  <a href="shadecard.html" class="shadecard-btn">
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-    Explore Shadecard
-  </a>
-
-  <!-- Rangoli Gallery Section -->
-  <section class="gallery-section">
-    <h2>Rangoli</h2>
-    <div class="gallery">
-      <img src="images/rangoli.jpg">
-      <img src="images/rangolii.jpg">
-      <img src="images/arangoli.jpg">
-      <img src="images/brangoli.jpg">
-      <img src="images/drangoli.jpg">
-      <img src="images/erangoli.jpg">
-      <img src="images/rrangoli.jpg">
-      <img src="images/srangoli.jpg">
-      <img src="images/trangoli.jpg">
-      <img src="images/urangoli.jpg">
-      <img src="images/vrangoli.jpg">
-      <img src="images/wrangoli.jpg">
-      <img src="images/zrangoli.jpg">
-    </div>
-  </section>
-
-  <!-- Stencils Gallery Section -->
-  <section class="gallery-section">
-    <h2>Stencils</h2>
-    <div class="gallery">
-      <img src="images/frangoli.jpg">
-      <img src="images/grangoli.jpg">
-      <img src="images/hrangoli.jpg">
-      <img src="images/irangoli.jpg">
-      <img src="images/jrangoli.jpg">
-      <img src="images/krangoli.jpg">
-      <img src="images/lrangoli.jpg">
-      <img src="images/mrangoli.jpg">
-      <img src="images/nrangoli.jpg">
-      <img src="images/orangoli.jpg">
-      <img src="images/prangoli.jpg">
-      <img src="images/qrangoli.jpg">
-    </div>
-  </section>
-
-  <!-- Floating Buttons -->
-  <a href="https://wa.me/918395994899" target="_blank" class="floating-btn">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-  </a>
-  <a href="mailto:vanshikarangolimart@gmail.com" class="floating-btn mail-btn">
-    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
-  </a>
-<footer>
-<div class="footer-nav">
-  <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="contacts.html">Contact</a>
+<!-- Banner -->
+<div class="banner-container">
+  <img src="banner.jpg" alt="Vanshika Rangoli Banner" />
 </div>
-<p>© 2025 Vanshika Rangoli. A wholesale brand serving India for over 20 years. Made in India | UDYAM-HR-03-002983 | ESMI No: 2983/HR/2023</p>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <h1>Vanshika Rangoli</h1>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shadecard.html">Shadecard</a>
+    <a href="products.html">Products</a>
+    <a href="contacts.html">Contact</a>
+  </div>
+</nav>
+
+<!-- Shadecard Button -->
+<a href="shadecard.html" class="shadecard-btn">🎨 Explore Shadecard</a>
+
+<!-- Rangoli Gallery -->
+<section class="gallery-section">
+  <h2>Rangoli</h2>
+  <div class="gallery">
+    <img src="images/rangoli.jpg" alt="">
+    <img src="images/rangolii.jpg" alt="">
+    <img src="images/arangoli.jpg" alt="">
+    <img src="images/brangoli.jpg" alt="">
+    <img src="images/drangoli.jpg" alt="">
+    <img src="images/erangoli.jpg" alt="">
+    <img src="images/rrangoli.jpg" alt="">
+    <img src="images/srangoli.jpg" alt="">
+    <img src="images/trangoli.jpg" alt="">
+    <img src="images/urangoli.jpg" alt="">
+    <img src="images/vrangoli.jpg" alt="">
+    <img src="images/wrangoli.jpg" alt="">
+    <img src="images/zrangoli.jpg" alt="">
+  </div>
+</section>
+
+<!-- Stencils Gallery -->
+<section class="gallery-section">
+  <h2>Stencils</h2>
+  <div class="gallery">
+    <img src="images/frangoli.jpg" alt="">
+    <img src="images/grangoli.jpg" alt="">
+    <img src="images/hrangoli.jpg" alt="">
+    <img src="images/irangoli.jpg" alt="">
+    <img src="images/jrangoli.jpg" alt="">
+    <img src="images/krangoli.jpg" alt="">
+    <img src="images/lrangoli.jpg" alt="">
+    <img src="images/mrangoli.jpg" alt="">
+    <img src="images/nrangoli.jpg" alt="">
+    <img src="images/orangoli.jpg" alt="">
+    <img src="images/prangoli.jpg" alt="">
+    <img src="images/qrangoli.jpg" alt="">
+  </div>
+</section>
+
+<!-- Floating Buttons -->
+<div class="float-btns">
+  <a href="https://wa.me/918395994899" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  <a href="mailto:vanshikarangolimart@gmail.com" class="mail-btn"><i class="fas fa-envelope"></i></a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contacts.html">Contact</a>
+  </div>
+  <p>© 2025 Vanshika Rangoli. A wholesale brand serving India for over 20 years. Made in India | UDYAM-HR-03-002983 | ESMI No: 2983/HR/2023</p>
 </footer>
+
 </body>
-</html>
+  </html>
