@@ -1,4 +1,3 @@
-
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,42 +26,41 @@
       background: url("banner.jpg") center/cover no-repeat;
     }
 
-    /* Navbar */
     .navbar {
-      width: 100%;
-      background: linear-gradient(90deg, #ffe6f0, #ffd9ec, #ffe6f0);
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, #a9f1df, #ffbbbb);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color:black;
+  width:100%;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: black;
-    }
+.nav-links {
+  display: flex;
+  padding:25px;
+  color:black;
+  align-items: left;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
+.nav-links a {
+  padding: 4px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-weight: 500;
+  color:black;
+  border-radius:12px;
+  background-color:#FDFDFDB5;
+  margin:3px 3px 3px 2.5px;
+  display:inline-block;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      font-size: 16px;
-      color: black;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #cc0066;
-    }
-
+.nav-links a:hover {
+  background-color: rgba(0, 187, 255, 0.2);
+}
     /* Contact Section */
     .contact-section {
       max-width: 900px;
@@ -85,12 +83,12 @@
     }
 
     .highlight {
-      color: #cc0066;
+      color: #CC0000;
       font-weight: bold;
     }
 
     .contact-details {
-      background: #fff5fa;
+      background: #FF717129;
       padding: 25px;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -101,7 +99,7 @@
     .contact-details h2 {
       margin-bottom: 15px;
       font-size: 22px;
-      color: #cc0066;
+      color: #CC0000;
     }
 
     .contact-details p {
@@ -164,6 +162,28 @@
     .mail-btn {
       right: 90px; /* space from WhatsApp */
     }
+footer {
+  background-color: #ffd9ec;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.footer-nav {
+  margin-bottom: 8px;
+}
+
+.footer-nav a {
+  color: #333;
+  margin: 0 10px;
+  border-right: 1px solid #999;
+  padding-right: 10px;
+}
+
+.footer-nav a:last-child {
+  border: none;
+}
 
   </style>
 </head>
@@ -173,7 +193,6 @@
   <div class="banner"></div>
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">Vanshika Rangoli</div>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="shadecard.html">Shade Card</a>
@@ -230,4 +249,4 @@
 
 
 </body>
-      </html>
+</html>
