@@ -20,52 +20,64 @@
       line-height: 1.5;
     }
 
-    /* Banner */
-    .banner {
-      width: 100%;
-      height: 300px;
-      background: url("banner.jpg") center/cover no-repeat;
-    }
+/* Banner */
+.banner {
+  width: 100%;
+  height: 280px; /* Adjust height as needed */
+  background: url("banner.jpg") center/cover no-repeat;
+}
 
-    /* Navbar */
-    .navbar {
-      width: 100%;
-      background: linear-gradient(90deg, #a9f1df, #ffbbbb);
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap; /* ✅ Allows wrapping on small screens */
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #a9f1df, #ffbbbb);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
 
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: black;
-    }
+.nav-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 12px;
+  background-color: #fdfdfdb5;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      font-size: 16px;
-      color: black;
-      transition: color 0.3s;
-    }
+.nav-links a:hover {
+  background-color: rgba(0, 187, 255, 0.2);
+}
 
-    .nav-links a:hover {
-      color: #cc0066;
-    }
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
 
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner {
+    height: 180px; /* smaller banner for mobile */
+  }
+}
     /* Shadecard Button */
     .shadecard-btn {
       display: inline-flex;
@@ -241,20 +253,18 @@
 </head>
 <body>
 
-  <!-- Banner -->
-  <div class="banner"></div>
+<!-- Banner -->
+<div class="banner"></div>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">Vanshika Rangoli</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="shadecard.html">Shade Card</a>
-      <a href="products.html">Products</a>
-      <a href="contacts.html">Contact</a>
-    </div>
-  </nav>
-
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shadecard.html">Shade Card</a>
+    <a href="products.html">Products</a>
+    <a href="contacts.html">Contact</a>
+  </div>
+</nav>
   <!-- Shadecard Button -->
   <div style="text-align:center;">
     <a href="shadecard.html" class="shadecard-btn">
