@@ -19,56 +19,63 @@ body {
 }
 
 /* Banner */
-.banner-container {
+.banner {
   width: 100%;
-  max-height: 350px;
-  overflow: hidden;
-}
-
-.banner-container img {
-  width:100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  height: 280px; /* Adjust height as needed */
+  background: url("banner.jpg") center/cover no-repeat;
 }
 
 /* Navbar */
 .navbar {
   position: sticky;
   top: 0;
+  width: 100%;
   background: linear-gradient(90deg, #a9f1df, #ffbbbb);
   padding: 15px 30px;
   display: flex;
-  justify-content: space-between;
-  align-items: left;
+  justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  color:black;
-  width:100%;
+  z-index: 1000;
 }
 
 .nav-links {
   display: flex;
-  padding:25px;
-  color:black;
-  align-items: left;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
-  padding: 4px 12px;
-  border-radius: 6px;
-  transition: 0.3s;
+  padding: 6px 14px;
+  border-radius: 12px;
+  background-color: #fdfdfdb5;
   font-weight: 500;
-  color:black;
-  border-radius:12px;
-  background-color:#FDFDFDB5;
-  margin:3px 3px 3px 2.5px;
-  display:inline-block;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
   background-color: rgba(0, 187, 255, 0.2);
 }
 
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner {
+    height: 180px; /* smaller banner for mobile */
+  }
+}
 /* Shadecard Button */
 .shadecard-btn {
   display:inline-block;
@@ -202,20 +209,17 @@ footer {
 <body>
 
 <!-- Banner -->
-<div class="banner-container">
-  <img src="banner.jpg" alt="Vanshika Rangoli Banner" />
-</div>
+<div class="banner"></div>
 
 <!-- Navbar -->
 <nav class="navbar">
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="shadecard.html">Shadecard</a>
+    <a href="shadecard.html">Shade Card</a>
     <a href="products.html">Products</a>
     <a href="contacts.html">Contact</a>
   </div>
 </nav>
-
 <!-- Shadecard Explore Button -->
 <a href="shadecard.html" class="shadecard-btn">
   <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="palette icon">
@@ -316,4 +320,4 @@ function googleTranslateElementInit() {
 </script>
 
 </body>
-    </html>
+</html>
